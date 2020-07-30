@@ -1,0 +1,30 @@
+<ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Browse"></Label>
+</ActionBar>
+
+<StackLayout class="form">
+    <Label class="text" text="Identyfikator pojazdu {{dataList.id}}"></Label>
+    <Label class="text" text="Wypożyczono {{dataList.start_date}}"></Label>
+    <Label class="text" text="Zwrot do {{dataList.end_date}}"></Label>
+    <Label class="text" text="Kod do skrzynki {{dataList.box_code}}"></Label>
+    <Label class="text" text="Należność {{dataList.cost}}"></Label>
+    <Button text="Opłać kaucję" *ngIf="!dataList.box_code" (tap)="payDeposit()"></Button>
+    <Button text="Zwróć pojazd" *ngIf="dataList.box_code" (tap)="giveBackCar()"></Button>
+    <Button text="Opłać należność" *ngIf="dataList.cost" (tap)="payCharge()"></Button>
+</StackLayout>
+<style>
+.form{
+  margin-top: 30;
+  margin-left: 30;
+  margin-right: 30;
+  text-align: center;
+}
+.text{
+    font-size:20;
+    color: black;
+}
+</style>

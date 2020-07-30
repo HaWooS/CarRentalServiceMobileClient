@@ -1,0 +1,57 @@
+
+<StackLayout flexDirection="column" class="page">
+    <Label class="page__content-placeholder" text="Nie masz jeszcze konta?" top="10"></Label>
+<StackLayoutLayout>
+<StackLayout flexDirection="column" class="page">
+        <Label class="page__content-placeholder" text="Zarejestruj się"></Label>
+        <Button  text="Rejestracja" class="button" (tap)="onRegister()"></Button>
+<StackLayoutLayout>
+<StackLayout flexDirection="column" class="page">
+        <Label class="page__content-placeholder" text="Zaloguj się jeśli posiadasz konto" top="10"></Label>
+<StackLayoutLayout>
+<StackLayout class="form">
+        <StackLayout class="input-field">
+          <TextField hint="Username" class="input" [(ngModel)]="username"></TextField>
+        </StackLayout>
+
+        <StackLayout class="input-field">
+          <TextField hint="Password" class="input" [(ngModel)]="password"></TextField>
+        </StackLayout>
+
+        <Button text="Zaloguj" class="button" (tap)="onLogin()"></Button>
+</StackLayout>
+<style>
+.page__content-placeholder{
+    margin-top: 10;
+    font-size: 25;
+    color: whitesmoke;
+    text-align: center;
+}
+.button{
+    color:aliceblue;
+    width: 300;
+    margin-top: 15;
+    font-size: 20;
+    background-color: rgb(7, 71, 248);
+}
+.page{
+    background-color:rgb(3, 16, 129);
+}
+.form {
+  margin-top: 30;
+  margin-left: 30;
+  margin-right: 30;
+  font-size: 30;
+  flex-grow: 300;
+  vertical-align: middle;
+}
+.input{
+    color: white;
+    text-align: center;
+    font-size: 25;
+}
+.input-field{
+    font-size:30;
+    color:white;
+}
+</style>
